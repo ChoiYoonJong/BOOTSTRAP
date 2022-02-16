@@ -1,0 +1,70 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Test Bootstrap</title>
+
+    <link rel="stylesheet" href="../resource/css/common.css">
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- .container-fluid클래스는 뷰포트의 전체 너비에 걸쳐 있는 전체 너비 컨테이너 를 제공합니다. -->
+    <!-- bg-* : 부트스트랩css에서 제공하는 배경색을 변경하는 클래스 -->
+    <div class="container-fluid bg-dark">
+        <header>
+            <div class="row">
+                <h1>Test Bootstrap</h1> 
+            </div>
+            <!-- .navbar : 네비게이션바를 사용하기위한 선언클래스 -->
+            <!-- .navbar-expand-* : *사이즈 이하일때는 세로정렬 되고 이상일때는 가로정렬되어 출력된다 -->
+            <!-- 
+                navbar-{light or dark} : 
+                light : 텍스트 색상을 어둡게 합니다
+                dark : 텍스트 색상을 밝게 합니다
+            -->
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <!-- .navbar-nav으로 full-height와 보다 가벼운 네비게이션(드롭다운을 위한 지원 포함)을 실현. -->
+                <!-- 
+                    .mr-auto 는 margin right auto 라는 뜻입니다. 따라서 2개의 ul 요소를 서로 떼어 놓기 위한 코드입니다. 
+                    따라서 2번째 ul 요소에 ml-auto를 넣어줘도 같은 효과를 나타냅니다.-->
+                <ul class="navbar-nav mr-auto myNav">
+                    <!-- nav-item : 네비게이션바의 목록이라는것을 표시하기위해 작성하는 클래스 -->
+                    <!-- active : 활성화 -->
+                    <!-- nav-link : 네비게이션바의 링크라는것을 표시하기위해 작성하는 클래스-->
+                    <li class="nav-item active"><a class="nav-link" href="myPage.html">Navigation 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="views/GridLayout.html">그리드 레이아웃</a></li>
+                    <li class="nav-item"><a class="nav-link" href="views/Size.html">가변 사이즈 활용</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="row">
+            <section class="col-sm-8">
+               Section Part<br>
+                <!-- card : 내용 주위에 패딩이 있는 테두리 상자 -->
+                <div class="card col-sm-5 content"> test 1 </div>
+                <div class="card col-sm-5 content"> test 2 </div>
+                <div class="card col-sm-10 content" style="margin-top:10px; margin-bottom: 25px;"> test 3 </div>
+            </section>
+            <aside class="col-sm-4">
+                <p>Aside Content 1</p>
+                <p>Aside Content 2</p>
+                <p>Aside Content 3</p>
+                <p>Aside Content 4</p>
+            </aside>
+        </div>
+        <footer class="row"> 
+            <div class="col-md-12">
+                Copyright by J <br>  
+            </div>
+        </footer>
+    </div>
+    </body>
+
+</html>

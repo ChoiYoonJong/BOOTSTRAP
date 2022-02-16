@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>	
+<head>
+	<!--
+			부트스트랩이란?
+			더 빠르고 쉬운 웹 개발을 위한 무료 프론트엔드 프레임워크(:목적에 따라 효율적으로 구조를 짜놓는 개발 방식)입니다.
+			부트스트랩에는 타이포그래피, 양식, 버튼, 테이블, 탐색, 모달, 이미지 캐러셀 및 기타 여러 가지를 위한 HTML 및 CSS 기반 디자인 템플릿과
+			선택적 JavaScript 플러그인이 포함되어 있습니다.
+			또한 부트스트랩은 반응형 디자인(:다양한 디바이스에서 원활하게 사용가능)을 쉽게 만들 수 있는 기능을 제공합니다.
+
+			부트스트랩을 사용하는 이유?
+			- 사용하기 쉬움: HTML 및 CSS에 대한 기본 지식만 있으면 누구나 부트스트랩 사용을 시작할 수 있다.
+			- 반응형 기능: Bootstrap의 반응형 CSS는 휴대폰, 태블릿 및 데스크톱에 맞게 조정된다.
+			- 모바일 우선 접근 방식: Bootstrap에서 모바일 우선 스타일은 핵심 프레임워크의 일부이다.
+			- 브라우저 호환성: Bootstrap 4는 모든 최신 브라우저(Chrome, Firefox, Internet Explorer 10+, Edge, Safari 및 Opera)와 호환된다.
+		-->	
+
+	<meta charset="UTF-8">
+	<!--부트스트랩을 사용하기 위해서 추가하고 싶다면 필요한 오픈 소스 CDN인 jsDelivr를 가져와서 사용한다.-->
+	       <!-- Latest compiled and minified CSS -->
+		   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		   <!-- jQuery library -->
+		   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		   <!-- Latest compiled JavaScript -->
+		   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<title>가변크기 활용하기</title>
+	<style>
+		div div {
+			border:1px solid black;
+			padding:0px;
+		}
+		img {
+			width:100%;
+			height:150px;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center">가변크기 활용하기</h1>
+	
+	<!--컬럼을 나누려먼 반드시 row를 먼저 선언하고 그 안에 column을 사용한다.-->
+	<!--
+		class="col-*-*"
+			첫 번째 별(*)은 sm, md, lg 또는 xl의 응답성,사이즈를 나타내고 
+			두 번째 별은 숫자를 나타내는데,	부트스트랩에서는 기본적으로 12칼럼으로 나누어서 기능을 제공하고 있다.
+			각 배치할 %에 따라 클래스를 결정하면 된다.
+			예를 들어 같은 넓이의 3개의 칼럼을 쓰고자 한다면 
+			3개의 'col-(사이즈)-4' 칼럼을 쓰면 된다
+			12 칼럼이 넘어가면 새로운 줄로 칼럼이 배치된다.
+
+			기기 사이즈에 따라 사용되는 클래스가 다르다. (첫번째별에 해당하는 부분)
+			.col- (초소형 기기(스마트폰 등) - 화면 너비가 576px 미만) : 항상 가로로 배치된다
+			.col-sm- (소형 기기(태블릿 등) - 화면 너비가 576px 이상) 
+			.col-md- (중형 기기(랩탑 등) - 화면 너비가 768px 이상)
+			.col-lg- (대형 기기(데스크탑 등) - 화면 너비가 992px 이상)
+			.col-xl- (xlarge 장치 - 화면 너비가 1200px 이상)
+
+			위의 코드에서 쓰인 
+			class="col-lg-1" 코드는 1개의 칼럼을 라지사이즈로 세로로 배치하고,
+			class="col-lg-5" 코드는 5개의 칼럼을 라지사이즈로 세로로 배치하겠다는 의미
+		-->
+		
+	<div class="row">			
+		<div class="col-lg-1"></div> 
+		<div class="col-lg-5"><img src="../../resource/image/flower1.PNG" class="img-responsive"></div>		
+		<div class="col-lg-5"><img src="../../resource/image/flower3.PNG" class="img-responsive"></div>
+		<div class="col-lg-1"></div>		
+		
+		<!--		
+			class="img-responsive"
+			반응형 이미지(:화면 크기에 맞게 자동으로 조정된다)를 만드는 방법이다.
+			<img> 태그에 img-responsive클래스를 추가하여 반응형 이미지를 만들 수 있다.
+			그러면 이미지가 상위 요소에 맞게 조정된다. 
+			.img-responsive클래스가 display: block; max-width: 100%; height: auto; 의 속성을 갖고 있기 때문에 따로 css할 필요가 없다.				
+		-->
+	
+	
+	</div>
+
+	
+</body>
+</html>
